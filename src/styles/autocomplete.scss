@@ -113,6 +113,7 @@ body{
   color: $yellowColor
 }
 ::-webkit-scrollbar-button {
+  background-image:url('');
   background-repeat:no-repeat;
   width:6px;
   height:0px
@@ -133,6 +134,7 @@ body{
 }
     
 ::-webkit-resizer{
+  background-image:url('');
   background-repeat:no-repeat;
   width:7px;
   height:0px

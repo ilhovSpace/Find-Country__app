@@ -31,10 +31,11 @@ const countryCardTepmlate = (country) => {
 
 const countryCard = async (country) => {
   const allCountryInfo = await request(country);
-  const viewedCountry = await allCountryInfo;
-  viewedCountry[0].viewed = true;
-  localData.setdata(...viewedCountry);
-  return countryCardTepmlate(...allCountryInfo);
+  const [viewedCountry] = [...allCountryInfo];
+
+  viewedCountry.viewed = true;
+  localData.setData(viewedCountry);
+  return countryCardTepmlate(viewedCountry);
 };
 
 export default countryCard;

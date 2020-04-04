@@ -1,11 +1,12 @@
 const localData = {
-  getdata: () => JSON.parse(localStorage.getItem('viewedCountries')),
-  cleardata: () => localStorage.clear(),
-  setdata: (viewedCounries) => {
-    if (localStorage.getItem('viewedCountries') === null) {
+  getData: () => JSON.parse(localStorage.getItem('viewedCountries')),
+  clearData: () => localStorage.clear(),
+  setData: (viewedCounries) => {
+    if (!localStorage.getItem('viewedCountries')) {
       localStorage.setItem('viewedCountries', JSON.stringify([viewedCounries]));
     } else {
-      const unviewedCountries = JSON.parse(localStorage.getItem('viewedCountries')).filter((item) => item.name !== viewedCounries.name);
+      const unviewedCountries = JSON.parse(localStorage.getItem('viewedCountries')).filter(({ name }) => name !== viewedCounries.name);
+
       localStorage.setItem('viewedCountries', JSON.stringify([viewedCounries, ...unviewedCountries]));
     }
   },
