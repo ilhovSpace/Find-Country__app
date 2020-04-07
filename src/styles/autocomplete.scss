@@ -1,0 +1,145 @@
+$darkColor: #3a4750;
+$liteColor: #eeeeee;
+$yellowColor: #f6c90e;
+
+body{
+  color: $liteColor;
+  background: $darkColor;
+}
+
+*{
+  outline: none !important
+}
+
+.logo{
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  img {
+    position: relative;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.search-form{
+  display: flex;
+  margin-bottom: 0;
+
+  button{
+    font-size: 1.5rem;
+    color: $darkColor;
+    margin: 0;
+    padding: 0;
+    border: none;
+      & :hover{
+        color: $yellowColor;
+      }
+    }
+    i{
+        margin-left: -40px;;
+    }
+}
+
+.loading{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.card-autocomplete{
+  color: $liteColor;
+  min-height: 48px;
+  padding: 5px 0;
+  display: flex;
+  border-bottom: 1px solid $yellowColor;
+  border-radius: 5px;
+    cursor: pointer;
+
+    h4 {
+      font-size: 1rem;
+      margin-top: 10px;
+      margin-left: 15px;
+      padding: 0;
+    }
+
+    i {
+      font-size: 1rem;
+      margin-top: 10px;
+      margin-left: 15px;
+      padding: 0;
+    }
+
+    small {
+      margin-top: 10px;
+      margin-left: 15px;
+      padding: 0;
+    }
+
+    &:hover{
+      background: #303841;
+    }
+} 
+
+.country-card{
+  margin: 10px 15px;
+
+  .full-info{
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  span {
+    color: $yellowColor;
+  }
+  .short-info{
+    text-align: center;
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;;
+    }
+  }
+}
+#match-list{
+  max-height: 250px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.viewed{
+  color: $yellowColor
+}
+::-webkit-scrollbar-button {
+  background-image:url('');
+  background-repeat:no-repeat;
+  width:6px;
+  height:0px
+}
+    
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+    
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color:#ffcb17;
+  box-shadow:0px 1px 1px #fff inset;
+  background-image:url('https://yraaa.ru/_pu/24/59610063.png');
+  background-position:center;
+  background-repeat:no-repeat;
+}
+    
+::-webkit-resizer{
+  background-image:url('');
+  background-repeat:no-repeat;
+  width:7px;
+  height:0px
+}
+    
+::-webkit-scrollbar{
+  width: 7px;
+}
